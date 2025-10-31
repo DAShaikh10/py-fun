@@ -7,7 +7,7 @@
 # ignore git submodule files
 .gitmodules
 .env/
-.vscode/
+# .vscode/ - Required to be commented out for the sub-task of committing VS Code settings.
 .libs/
 
 # ignore generated directories and compiled output

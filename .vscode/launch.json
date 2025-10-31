@@ -1,0 +1,19 @@
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// VSCode launch configuration for "Run and Debug" pane (Shift+Ctrl+D)
+//  - https://code.visualstudio.com/docs/java/java-debugging
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+{
+    "version": "1.0.0",
+    "configurations": [
+        {
+            "name": "Launch_1",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/main.py",
+            // "module": "${workspaceFolder}/main.py",
+            "args": [""],
+            "console": "integratedTerminal",
+            "justMyCode": true,
+        }
+    ]
+}
