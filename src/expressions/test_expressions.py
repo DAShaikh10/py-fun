@@ -11,6 +11,7 @@ Ran 11 tests in 0.002s
 OK
 <unittest.runner.TextTestResult run=11 errors=0 failures=0>
 """
+import abc
 import unittest
 from expressions import Expressions
 
@@ -56,16 +57,16 @@ Test_case_i = Test_case_j = Test_case_k = abc.ABC
 # attributes of tested objects (self.ut1...ut8)
 # uncomment tests one after another as you progress with expressions
 Test_case_a = Test_case   # test a) passes, solution is given in numbers.py
-# Test_case_b = Test_case
-# Test_case_c = Test_case
-# Test_case_d = Test_case
-# Test_case_e = Test_case
-# Test_case_f = Test_case
-# Test_case_g = Test_case
-# Test_case_h = Test_case
-# Test_case_i = Test_case
-# Test_case_j = Test_case
-# Test_case_k = Test_case
+Test_case_b = Test_case
+Test_case_c = Test_case
+Test_case_d = Test_case
+Test_case_e = Test_case
+Test_case_f = Test_case
+Test_case_g = Test_case
+Test_case_h = Test_case
+Test_case_i = Test_case
+Test_case_j = Test_case
+Test_case_k = Test_case
 
 
 class TestCase_a_number_of_numbers(Test_case_a):
