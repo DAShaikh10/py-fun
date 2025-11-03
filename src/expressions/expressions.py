@@ -37,7 +37,7 @@ class Expressions:
         self.c = self.numbers[-3:]
 
         # d) initialize with last three numbers reverse: [7, 8, 1]
-        self.d = list(reversed(self.c))
+        self.d = self.c[::-1] # list(reversed(self.c))
 
         # e) initialize with odd numbers: [3, 17, 1, 7]
         self.e = [number for number in self.numbers if number % 2 != 0]

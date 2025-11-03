@@ -1,59 +1,66 @@
 //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 // VSCode project settings file.
 {
-    "code-runner.defaultLanguage": "python",
-    "code-runner.showExecutionMessage": false,
-    "code-runner.clearPreviousOutput": true,
-    "code-runner.executorMap": {
-        // "python": "\"$pythonPath\" $fullFileName",
-        "python": "python ./main.py",
+  "code-runner.defaultLanguage": "python",
+  "code-runner.showExecutionMessage": false,
+  "code-runner.clearPreviousOutput": true,
+  "code-runner.executorMap": {
+    // "python": "\"$pythonPath\" $fullFileName",
+    "python": "python ./main.py"
+  },
+  "makefile.configureOnOpen": false,
+
+  // Python test settings, requires module 'pytest'
+  // - verify: python -m pytest --version --> 8.4.2
+  // - install module 'pytest': pip install pytest
+  "python.testing.pytestEnabled": true,
+  "python.testing.unittestEnabled": true,
+  "python.testing.autoTestDiscoverOnSaveEnabled": true,
+  "python.testing.unittestArgs": [
+    "-v",
+    "-s",
+    "${workspaceFolder}/tests",
+    "-p",
+    "*test*.py"
+  ],
+
+  // Editor settings
+  "editor.detectIndentation": false,
+  "editor.tabSize": 4,
+  "editor.insertSpaces": true, // insert spaces for tabs
+  "editor.renderWhitespace": "all", // show white spaces in editor as small dot
+  "editor.hover.enabled": true, // show context when hovering
+  "editor.hover.delay": 1500, // delay hover-time for context pop-ups (in ms)
+  "editor.minimap.enabled": false, // show minimap for long files
+  "editor.inlayHints.enabled": "off", // don't show argument names in method calls
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/*.pyc": true
+  },
+
+  "explorer.confirmDelete": false, // ask to comfirm file delete
+  "files.autoSave": "afterDelay", // 'afterDelay' (1sec), 'onFocusChange', 'onWindowChange'
+  "files.autoSaveDelay": 800,
+  "files.eol": "\n", // use '\n' as default line ending (not: CR/LF)
+
+  // Terminal settings, see https://code.visualstudio.com/docs/terminal/profiles
+  "terminal.integrated.defaultProfile.windows": "Bash",
+  "terminal.integrated.profiles.windows": {
+    "Bash": {
+      "path": ["bash"],
+      "args": [
+        "--init-file",
+        "'${workspaceFolder}'/.vscode/launch-terminal.sh"
+      ],
+      //   "args": ["--init-file", "~/.profile"],
+      "icon": "terminal-bash"
     },
-    "makefile.configureOnOpen": false,
-
-    // Python test settings, requires module 'pytest'
-    // - verify: python -m pytest --version --> 8.4.2
-    // - install module 'pytest': pip install pytest
-    "python.testing.pytestEnabled": true,
-    "python.testing.unittestEnabled": true,
-    "python.testing.autoTestDiscoverOnSaveEnabled": true,
-    "python.testing.unittestArgs": [
-        "-v", "-s", "${workspaceFolder}/tests", "-p", "*_test*.py"
-    ],
-
-    // Editor settings
-    "editor.detectIndentation": false,
-    "editor.tabSize": 4,
-    "editor.insertSpaces": true,            // insert spaces for tabs
-    "editor.renderWhitespace": "all",       // show white spaces in editor as small dot
-    "editor.hover.enabled": true,           // show context when hovering
-    "editor.hover.delay": 1500,             // delay hover-time for context pop-ups (in ms)
-    "editor.minimap.enabled": false,        // show minimap for long files
-    "editor.inlayHints.enabled": "off",     // don't show argument names in method calls
-        "files.exclude": {
-        "**/__pycache__": true,
-        "**/*.pyc": true
-    },
-
-    "explorer.confirmDelete": false,        // ask to comfirm file delete
-    "files.autoSave": "afterDelay",         // 'afterDelay' (1sec), 'onFocusChange', 'onWindowChange'
-    "files.autoSaveDelay": 800,
-    "files.eol": "\n",                      // use '\n' as default line ending (not: CR/LF)
-
-    // Terminal settings, see https://code.visualstudio.com/docs/terminal/profiles
-    "terminal.integrated.defaultProfile.windows": "Bash",
-    "terminal.integrated.profiles.windows": {
-        "Bash": {
-          "path": ["bash"],
-          "args": ["--init-file", "'${workspaceFolder}'/.vscode/launch-terminal.sh"],
-        //   "args": ["--init-file", "~/.profile"],
-          "icon": "terminal-bash",
-        },
-        "Git Bash": null,                   // remove other terminals from the menu
-        "PowerShell": null,
-        "Command Prompt": null,
-        "JavaScript Debug Terminal": null,
-        "Ubuntu (WSL)": null,
-    }
+    "Git Bash": null, // remove other terminals from the menu
+    "PowerShell": null,
+    "Command Prompt": null,
+    "JavaScript Debug Terminal": null,
+    "Ubuntu (WSL)": null
+  }
 }
 //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 // VSCode global settings file and project caches:
@@ -63,11 +70,11 @@
 //        +
 //        +-- settings.json         ; VSCode global settings file
 //        +-- workspaceStorage      ; VSCode project caches
-// 
+//
 // VSCode installation paths:
 //  - Windows: '%APPDATA%/Local/Programs/Microsoft\ VS\ Code/bin'
 //  - MacOS:   '/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin'
-// 
+//
 //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 // VSCode commands:
 //  - build: Ctrl-Shift-B
@@ -76,4 +83,4 @@
 //  - block comment: mark text and Ctrl-'#'
 //  - multi-cursor edits: Ctrl-Alt-<ArrowUp,Down> or Alt+<Click>
 //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-// 
+//
