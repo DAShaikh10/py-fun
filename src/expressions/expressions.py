@@ -49,7 +49,7 @@ class Expressions:
         self.g = sum(self.e)
 
         # h) duplicate numbers removed: [4, 12, 3, 8, 17, 1, 7]
-        self.h = list(set(self.numbers)) # list(dict.fromkeys(self.numbers).keys())
+        self.h = list(set(self.numbers))  # list(dict.fromkeys(self.numbers).keys())
 
         # i) number of duplicate numbers: 2
         self.i = self.a - len(self.h)
