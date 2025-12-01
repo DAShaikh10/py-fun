@@ -2,7 +2,7 @@ from . import Stream
 import random
 
 def main():
-    run_choice = 3
+    run_choice = 51
     #
     run_choices = {
         1:  "Challenge 1, Data streams in Python, run the first example",
