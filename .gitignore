@@ -15,6 +15,7 @@ bin/
 out/
 target/
 *.class
+**/__pycache__/*
 
 # ignore Java packaging files, *.war, *.ear
 *.jar
