@@ -1,3 +1,7 @@
+"""
+docker run --name neo4j-b4-graph -p 7474:7474 -p 7687:7687 -e NEO4J_AUTH=neo4j/password123 neo4j:latest
+"""
+
 from neo4j import GraphDatabase
 
 
